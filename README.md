@@ -1,22 +1,12 @@
 # Thomas O'Neill
 
-3D web engineer and creative technologist based in London. I build interactive experiences with WebGPU, Three.js, and AI — from volumetric shaders to semantic search systems.
+AI engineer based near London. Currently exploring AI-native workflows, from browser-resident LLM agents to semantic search over unstructured data.
 
-## What I'm working on
+## Recent projects
 
-- **[Semantic Atlas](https://github.com/oneilltomhq)** — Privacy-first 3D visualization of 5k+ AI conversations using WebGPU, clustered via BERTopic embeddings
-- **[Jobby](https://github.com/oneilltomhq/Jobby)** — AI job search system: conversational career coach + semantic matching engine (pgvector, Nomic AI)
-- **[Voice2Hand](https://github.com/oneilltomhq/Voice2Hand)** — Voice-driven poker hand recorder: Deepgram speech-to-text → Groq LLM parsing → interactive table replayer
+- **[agent-browser-ext](https://github.com/oneilltomhq/agent-browser-ext)** — Chrome extension providing CDP automation primitives for in-browser AI agents
+- **[browser-native-agent](https://github.com/oneilltomhq/browser-native-agent)** — LLM agent that runs in-browser, driving Chrome via agent-browser-ext
+- **[Semantic Atlas](https://github.com/oneilltomhq/semantic-atlas)** — 3D visualization of AI conversation history using WebGPU, clustered via BERTopic embeddings
+- **[Voice2Hand](https://github.com/oneilltomhq/Voice2Hand)** — Voice-driven poker hand recorder: Deepgram STT → Groq LLM → interactive replayer
+- **[Jobby](https://github.com/oneilltomhq/Jobby)** — AI job search: conversational career coach + semantic matching engine (pgvector, Nomic AI)
 - **[lib3](https://github.com/oneilltomhq/lib3)** — Published npm library of composable TSL shader nodes for Three.js WebGPU ([`@pipefold/lib3`](https://www.npmjs.com/package/@pipefold/lib3))
-
-## Previously
-
-**Lead 3D Web Engineer** at [Open Systems Lab](https://opensystemslab.io/) — built [BuildX](https://github.com/oneilltomhq/buildx-app), a parametric 3D modular housing design tool (WikiHouse), and the Atlas of Ownership geospatial platform.
-
-## Tech
-
-**Core:** TypeScript · React · Next.js · Three.js · WebGPU · WGSL/TSL shaders
-
-**AI & Data:** embeddings · pgvector · BERTopic · Vercel AI SDK · Python · pandas
-
-**Also:** Rust · Golang · Docker · Mapbox GL · Supabase · fp-ts
