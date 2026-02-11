@@ -99,6 +99,35 @@
     ],
     "projects": [
         {
+            "name": "voice-browser-agent",
+            "url": "https://github.com/oneilltomhq/voice-browser-agent",
+            "description": "Chrome Side Panel extension for voice-driven, LLM-powered browser automation — a persistent chat UI that drives the active tab via chrome.debugger/CDP, with a roadmap from manual commands through Anthropic tool-use orchestration to Deepgram voice interaction.",
+            "highlights": [
+                "8 CDP automation primitives dispatched from a Manifest V3 background service worker with per-tab session lifecycle",
+                "Ref system joining Accessibility tree with DOMSnapshot bounding boxes — traverses through ignored AX nodes via parentId indexing for reliable tree rendering",
+                "Formatted ARIA tree output with [ref=eN] annotations for element targeting by LLM agents",
+                "Side Panel chat UI for manual command entry; options page stores API keys in chrome.storage",
+                "Roadmap: Phase 2 adds Anthropic tool-use loop for autonomous browsing; Phase 3 adds Deepgram streaming STT/TTS for hands-free voice control"
+            ],
+            "keywords": [
+                "TypeScript",
+                "Chrome Extension",
+                "Manifest V3",
+                "Chrome DevTools Protocol",
+                "chrome.debugger",
+                "Accessibility Tree",
+                "DOMSnapshot",
+                "esbuild",
+                "Anthropic",
+                "Deepgram",
+                "Browser Automation",
+                "Side Panel API"
+            ],
+            "startDate": "2026-02-10",
+            "endDate": "",
+            "type": "extension"
+        },
+        {
             "name": "browser-native-agent",
             "url": "https://github.com/oneilltomhq/browser-native-agent",
             "description": "Reference implementation of a browser-resident LLM agent that automates the same Chrome instance via agent-browser-ext (MV3 + chrome.debugger/CDP) — no Playwright, no spawned Chromium; inherits existing cookies, auth state, and extensions.",
