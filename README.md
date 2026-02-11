@@ -4,6 +4,7 @@ AI engineer based near London. Currently exploring AI-native workflows, from bro
 
 ## Recent projects
 
+- **[voice-browser-agent](https://github.com/oneilltomhq/voice-browser-agent)** — Chrome Side Panel extension for voice-driven, LLM-powered browser automation via CDP
 - **[agent-browser-ext](https://github.com/oneilltomhq/agent-browser-ext)** — Chrome extension providing CDP automation primitives for in-browser AI agents
 - **[browser-native-agent](https://github.com/oneilltomhq/browser-native-agent)** — LLM agent that runs in-browser, driving Chrome via agent-browser-ext
 - **[Semantic Atlas](https://github.com/oneilltomhq/semantic-atlas)** — 3D visualization of AI conversation history using WebGPU, clustered via BERTopic embeddings
