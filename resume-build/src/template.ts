@@ -37,6 +37,12 @@ function formatDate(dateStr: string): string {
   return date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
 }
 
+function smartQuotes(text: string): string {
+  return text
+    .replace(/(\s)'(\w)/g, '$1\u2019$2')    // apostrophe after space: since '25
+    .replace(/\.\.\./g, '\u2026');            // ellipsis
+}
+
 function icon(icons: Record<string, string>, name: string): string {
   if (name === 'github') return `<span class="icon">${GITHUB_ICON}</span>`;
   const svg = icons[name];
@@ -78,7 +84,7 @@ export function renderHTML(
 
   const synopsisHTML = `
     <div class="synopsis">
-      ${summaryLines.map((l) => `<p>${l}</p>`).join('\n')}
+      ${summaryLines.map((l) => `<p>${smartQuotes(l)}</p>`).join('\n')}
     </div>
   `;
 
@@ -86,7 +92,10 @@ export function renderHTML(
     .map(
       (p) => `
     <div class="project">
-      <h3><a href="${p.url}"><span class="project-name-text">${p.name}</span></a></h3>
+      <div class="project-header">
+        <h3><a href="${p.url}"><span class="project-name-text">${p.name}</span></a></h3>
+        <span class="work-dates">${formatDate(p.startDate)}${p.endDate ? ` – ${formatDate(p.endDate)}` : ''}</span>
+      </div>
       <p class="project-description">${p.description}</p>
       <ul>
         ${p.highlights.map((h) => `<li>${h}</li>`).join('\n')}
