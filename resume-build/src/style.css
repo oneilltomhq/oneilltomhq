@@ -9,12 +9,35 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-  color: #000;
+  color: #1a1a1a;
   background: #fff;
   font-size: 10.5px;
   line-height: 1.55;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+:root {
+  --s: 4px;
+  --sidebar-ratio: 28%;
+  --main-ratio: 70%;
+  --col-gap: 68px;
+}
+
+/* ── Hero (full-width header) ───────────────────────── */
+
+.hero {
+  margin-bottom: calc(var(--s) * 4);
+  padding-bottom: calc(var(--s) * 3);
+  text-align: right;
 }
 
 /* ── Name ───────────────────────────────────────────── */
@@ -23,46 +46,54 @@ h1.name {
   font-family: 'EB Garamond', 'Georgia', serif;
   font-size: 30px;
   font-weight: 400;
-  text-align: center;
   letter-spacing: 0.01em;
-  margin-bottom: 12px;
+  line-height: 1.05;
+  margin-bottom: calc(var(--s) * 2);
 }
 
-.header-rule {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin-bottom: 16px;
-}
+/* ── Sidebar layout ─────────────────────────────────── */
 
-/* ── Two-column header ──────────────────────────────── */
-
-.two-column {
+.layout {
   display: flex;
-  gap: 32px;
-  align-items: flex-start;
-  margin-bottom: 18px;
-}
-
-.two-column .col-left {
-  flex: 0 0 33%;
-}
-
-.two-column .col-right {
+  gap: var(--col-gap);
+  align-items: stretch;
   flex: 1;
+}
+
+.main {
+  flex: 0 0 calc(var(--main-ratio) - var(--col-gap));
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .section:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.sidebar {
+  flex: 0 0 var(--sidebar-ratio);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ── Section headings ───────────────────────────────── */
 
 h2 {
   font-family: 'EB Garamond', 'Georgia', serif;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.015em;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 5px;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding-bottom: 6px;
   margin-bottom: 8px;
   display: flex;
   align-items: center;
+}
+
+.sidebar h2 {
+  font-size: 16px;
 }
 
 /* ── Pictograms (section heading icons) ─────────────── */
@@ -71,10 +102,12 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
-  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  margin-right: 0;
   flex-shrink: 0;
+  order: 1;
 }
 
 .pictogram svg {
@@ -114,15 +147,19 @@ h2 {
 }
 
 .contact-list li {
-  margin-bottom: 4px;
-  font-size: 10.5px;
-  line-height: 1.6;
+  margin-bottom: var(--s);
+  font-size: 10px;
+  line-height: 1.5;
   display: flex;
   align-items: center;
 }
 
+.contact-list li::before {
+  content: none;
+}
+
 .contact-list a {
-  color: #000;
+  color: #1a1a1a;
   text-decoration: none;
 }
 
@@ -130,14 +167,18 @@ h2 {
 
 .synopsis p {
   font-size: 10.5px;
-  line-height: 1.65;
-  margin-bottom: 2px;
+  line-height: 1.55;
+  margin-bottom: var(--s);
 }
 
 /* ── Sections ───────────────────────────────────────── */
 
 .section {
-  margin-bottom: 14px;
+  margin-bottom: 20px;
+}
+
+.section-contact {
+  margin-top: 0;
 }
 
 /* ── Projects ───────────────────────────────────────── */
@@ -154,14 +195,17 @@ h3 {
   break-inside: avoid;
 }
 
+.project-header {
+  margin-bottom: 1px;
+}
+
 .project h3 a {
-  color: #000;
+  color: #1a1a1a;
   text-decoration: none;
 }
 
 .project h3 a .project-name-text {
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
 }
 
 .project-description {
@@ -172,8 +216,8 @@ h3 {
 }
 
 .project-keywords {
-  font-size: 9px;
-  color: #777;
+  font-size: 8.5px;
+  color: #999;
   margin-top: 1px;
   line-height: 1.4;
 }
@@ -186,9 +230,6 @@ h3 {
 }
 
 .work-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   margin-bottom: 2px;
 }
 
@@ -198,7 +239,7 @@ h3 {
 }
 
 .work-header h3 a {
-  color: #000;
+  color: #1a1a1a;
   text-decoration: none;
 }
 
@@ -208,15 +249,15 @@ h3 {
   font-style: italic;
   color: #444;
   white-space: nowrap;
-  margin-left: 16px;
-  flex-shrink: 0;
+  display: block;
+  font-variant-numeric: tabular-nums;
 }
 
 /* ── Bullets (shared) ───────────────────────────────── */
 
 ul {
-  margin-left: 16px;
-  list-style-type: disc;
+  margin-left: 0;
+  list-style-type: none;
   margin-bottom: 0;
   padding-left: 0;
 }
@@ -224,29 +265,34 @@ ul {
 li {
   font-size: 10px;
   line-height: 1.5;
-  padding-left: 2px;
+  padding-left: 0;
   margin-bottom: 1px;
 }
 
-/* ── Skills ─────────────────────────────────────────── */
-
-.skills-list {
-  list-style: none;
-  margin-left: 0;
-  padding: 0;
+li::before {
+  content: none;
 }
 
-.skills-list li {
-  margin-bottom: 4px;
-  font-size: 10.5px;
-  line-height: 1.55;
-  padding-left: 0;
+/* ── Skills (inline tags) ───────────────────────────── */
+
+.section-skills {
+  padding-top: 4px;
+  margin-top: 45%;
 }
 
-.skills-item-name {
-  font-weight: 700;
+.skills-group {
+  margin-bottom: 8px;
 }
 
-.skills-item-keywords {
-  font-weight: 400;
+.skills-heading {
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.skills-line {
+  font-size: 9.5px;
+  line-height: 1.5;
+  color: #222;
 }
