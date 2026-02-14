@@ -37,6 +37,12 @@ function formatDate(dateStr: string): string {
   return date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
 }
 
+function smartQuotes(text: string): string {
+  return text
+    .replace(/(\s)'(\w)/g, '$1\u2019$2')    // apostrophe after space: since '25
+    .replace(/\.\.\./g, '\u2026');            // ellipsis
+}
+
 function icon(icons: Record<string, string>, name: string): string {
   if (name === 'github') return `<span class="icon">${GITHUB_ICON}</span>`;
   const svg = icons[name];
@@ -72,13 +78,14 @@ export function renderHTML(
       <li>${icon(icons, 'envelope')} <a href="mailto:${basics.email}">${basics.email}</a></li>
       ${github ? `<li>${icon(icons, 'github')} <a href="${github.url}">${github.username}</a></li>` : ''}
       ${linkedin ? `<li><span class="icon icon-linkedin">${icons['linkedin'] || ''}</span> <a href="${linkedin.url}">${linkedin.username}</a></li>` : ''}
+      <li>${icon(icons, 'websites')} <a href="${basics.url}">${basics.url.replace(/^https?:\/\//, '')}</a></li>
       <li>${icon(icons, 'earth')} ${basics.location.city}</li>
     </ul>
   `;
 
   const synopsisHTML = `
     <div class="synopsis">
-      ${summaryLines.map((l) => `<p>${l}</p>`).join('\n')}
+      ${summaryLines.map((l) => `<p>${smartQuotes(l)}</p>`).join('\n')}
     </div>
   `;
 
@@ -86,12 +93,14 @@ export function renderHTML(
     .map(
       (p) => `
     <div class="project">
-      <h3><a href="${p.url}"><span class="project-name-text">${p.name}</span></a></h3>
+      <div class="project-header">
+        <h3><a href="${p.url}"><span class="project-name-text">${p.name}</span></a></h3>
+        <span class="work-dates">${formatDate(p.startDate)}${p.endDate ? ` – ${formatDate(p.endDate)}` : ''}</span>
+      </div>
       <p class="project-description">${p.description}</p>
       <ul>
         ${p.highlights.map((h) => `<li>${h}</li>`).join('\n')}
       </ul>
-      <p class="project-keywords">${p.keywords.join(' · ')}</p>
     </div>
   `,
     )
@@ -113,20 +122,14 @@ export function renderHTML(
     )
     .join('\n');
 
-  const skillsHTML = `
-    <ul class="skills-list">
-      ${skills
-        .map(
-          (s) => `
-        <li>
-          <span class="skills-item-name">${s.name}:</span>
-          <span class="skills-item-keywords">${s.keywords.join(', ')}</span>
-        </li>
-      `,
-        )
-        .join('\n')}
-    </ul>
-  `;
+  const skillsHTML = skills
+    .map(
+      (s) => `<div class="skills-group">
+        <h4 class="skills-heading">${s.name}</h4>
+        <p class="skills-line">${s.keywords.join(' · ')}</p>
+      </div>`,
+    )
+    .join('\n');
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -140,33 +143,33 @@ export function renderHTML(
   <style>${css}</style>
 </head>
 <body>
-  <h1 class="name">${basics.name}</h1>
-  <hr class="header-rule">
+  <header class="hero">
+    <h1 class="name">${basics.name}</h1>
+    ${synopsisHTML}
+  </header>
 
-  <div class="two-column">
-    <div class="col-left">
-      <h2>${pictogram(pictograms, 'world--community--grid')}Contact &amp; Links</h2>
-      ${contactHTML}
-    </div>
-    <div class="col-right">
-      <h2>${pictogram(pictograms, 'tornado')}Synopsis</h2>
-      ${synopsisHTML}
-    </div>
-  </div>
+  <div class="layout">
+    <main class="main">
+      <div class="section">
+        <h2>Recent Projects</h2>
+        ${projectsHTML}
+      </div>
+      <div class="section">
+        <h2>Work Experience</h2>
+        ${workHTML}
+      </div>
+    </main>
 
-  <div class="section">
-    <h2>${pictogram(pictograms, 'tools')}Projects</h2>
-    ${projectsHTML}
-  </div>
-
-  <div class="section">
-    <h2>${pictogram(pictograms, 'briefcase')}Work Experience</h2>
-    ${workHTML}
-  </div>
-
-  <div class="section">
-    <h2>${pictogram(pictograms, 'heat--map--01')}Skills</h2>
-    ${skillsHTML}
+    <aside class="sidebar">
+      <div class="section section-contact">
+        <h2>Contact</h2>
+        ${contactHTML}
+      </div>
+      <div class="section section-skills">
+        <h2>Skills</h2>
+        ${skillsHTML}
+      </div>
+    </aside>
   </div>
 </body>
 </html>`;
