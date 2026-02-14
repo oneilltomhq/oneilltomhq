@@ -1,0 +1,145 @@
+basics:
+  name: Thomas O'Neill
+  email: tom@oneilltom.com
+  url: https://oneilltom.com
+  location:
+    city: London
+    countryCode: GB
+  profiles:
+    - network: GitHub
+      username: oneilltomhq
+      url: https://github.com/oneilltomhq
+    - network: LinkedIn
+      username: oneilltomhq
+      url: https://www.linkedin.com/in/oneilltomhq
+
+  summary: |
+    AI Engineer.
+    Building agentic tools and prototypes since '25.
+    10 years of full-stack and infrastructure work underneath.
+
+projects:
+  - name: browser-native-agent
+    description: >-
+      Chrome extension + LLM agent providing core automation parity with
+      Vercel's agent-browser (navigate, snapshot, click, type, screenshot,
+      evaluate) but running inside the user's own browser via chrome.debugger —
+      no Playwright, no spawned Chromium, inheriting existing auth and extensions.
+    url: https://github.com/oneilltomhq/browser-native-agent
+    startDate: 2026-02-08
+    highlights:
+      - AX tree + DOMSnapshot ref system for LLM element targeting — same [ref=eN] pattern as agent-browser
+      - 8 CDP primitives via MV3 service worker with singleton session lifecycle per tab
+      - Tool-calling agent loop (Anthropic SDK) — snapshot, plan, act, verify
+      - Side Panel chat UI for manual command entry and agent interaction
+    keywords:
+      - TypeScript
+      - Chrome Extension
+      - Manifest V3
+      - Chrome DevTools Protocol
+      - Accessibility Tree
+      - Anthropic SDK
+      - LLM Agents
+      - Tool-calling
+      - Browser Automation
+
+  - name: semantic-atlas
+    description: >-
+      3D explorer for AI conversation history: GDPR exports → embeddings →
+      UMAP/HDBSCAN clustering → interactive WebGPU visualization with topic
+      filtering and semantic navigation.
+    url: https://github.com/oneilltomhq/semantic-atlas
+    startDate: 2026-02-04
+    highlights:
+      - Reproducible NLP pipeline — GDPR exports → Nomic embeddings → UMAP → HDBSCAN clustering
+      - Interactive WebGPU/Three.js 3D explorer with topic filtering and semantic navigation
+    keywords:
+      - Python
+      - Three.js
+      - WebGPU
+      - NLP
+      - BERTopic
+      - UMAP
+      - HDBSCAN
+      - Nomic AI
+      - embeddings
+
+  - name: voice-to-hand
+    description: >-
+      Voice-driven poker hand recorder: Deepgram streaming STT → Groq LLM
+      parsing → structured OpenHandHistory format with interactive table replayer.
+    url: https://github.com/oneilltomhq/Voice2Hand
+    startDate: 2025-11-21
+    endDate: 2025-12-08
+    highlights:
+      - Real-time speech-to-text via Deepgram for live narration capture
+      - LLM-powered parsing (Groq) converting natural language into structured game state
+      - Incremental state updates via JSON Patches with interactive visual replayer
+    keywords:
+      - TypeScript
+      - Next.js
+      - Deepgram
+      - Groq
+      - Vercel AI SDK
+      - Speech-to-Text
+
+work:
+  - name: Open Systems Lab
+    position: Lead Engineer
+    url: https://opensystemslab.io/
+    startDate: 2021-11-01
+    endDate: 2025-03-01
+    highlights:
+      - >-
+        Led engineering of BuildX, a 3D web CAD tool for modular housing design
+        (WikiHouse configurator) — parametric modeling, collision detection,
+        geospatial site selection (Mapbox GL), IFC processing, with core logic
+        extracted into a shared library
+      - >-
+        Led development of Atlas of Ownership — a Next.js/Mapbox GL 3D globe
+        for browsing land ownership data
+
+  - name: Claranet
+    position: Systems Engineer & Developer
+    url: https://claranet.com
+    startDate: 2015-11-01
+    endDate: 2017-04-01
+    highlights:
+      - >-
+        Contributed to OpenStack Kolla (Neutron BGP routing); automated
+        infrastructure with Docker, Kubernetes, Ansible, Python, and Golang
+
+skills:
+  - name: AI & LLM
+    keywords:
+      - Tool-calling Agents
+      - Anthropic SDK
+      - Vercel AI SDK
+      - Groq
+      - Deepgram STT
+      - Embeddings
+      - UMAP
+      - HDBSCAN
+      - BERTopic
+      - Nomic AI
+
+  - name: Web Engineering
+    keywords:
+      - TypeScript
+      - React
+      - Next.js
+      - Three.js
+      - WebGPU
+      - Mapbox GL
+      - Chrome Extensions
+      - Manifest V3
+      - CDP
+
+  - name: Infrastructure
+    keywords:
+      - Python
+      - Docker
+      - Kubernetes
+      - Ansible
+      - Golang
+
