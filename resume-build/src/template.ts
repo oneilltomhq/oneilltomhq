@@ -155,12 +155,12 @@ export function renderHTML(
   </div>
 
   <div class="section">
-    <h2>${pictogram(pictograms, 'integration--02')}Projects</h2>
+    <h2>${pictogram(pictograms, 'tools')}Projects</h2>
     ${projectsHTML}
   </div>
 
   <div class="section">
-    <h2>${pictogram(pictograms, 'small-components-making-a-larger-whole')}Work Experience</h2>
+    <h2>${pictogram(pictograms, 'briefcase')}Work Experience</h2>
     ${workHTML}
   </div>
 
