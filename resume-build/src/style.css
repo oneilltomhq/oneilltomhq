@@ -45,8 +45,8 @@ h1.name {
 
 .two-column {
   display: grid;
-  grid-template-columns: 1fr var(--contact-w);
-  column-gap: var(--col-gap);
+  grid-template-columns: 1fr 1fr;
+  column-gap: 28px;
   align-items: end;
   margin-bottom: calc(var(--s) * 4);
   padding-bottom: calc(var(--s) * 3);
@@ -57,7 +57,7 @@ h1.name {
 }
 
 .two-column .col-right {
-  justify-self: end;
+  justify-self: start;
 }
 
 /* ── Section headings ───────────────────────────────── */
