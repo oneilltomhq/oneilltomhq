@@ -124,7 +124,10 @@ export function renderHTML(
 
   const skillsHTML = skills
     .map(
-      (s) => `<p class="skills-line"><strong>${s.name}</strong> · ${s.keywords.join(' · ')}</p>`,
+      (s) => `<div class="skills-group">
+        <h4 class="skills-heading">${s.name}</h4>
+        <p class="skills-line">${s.keywords.join(' · ')}</p>
+      </div>`,
     )
     .join('\n');
 

@@ -96,7 +96,7 @@ work:
 
   - name: Bearjam
     position: Co-Founder & Lead Developer
-    url: https://bearjam-dev.vercel.app/
+    url: https://github.com/bearjam
     startDate: 2020-01-01
     endDate: 2021-11-01
     highlights:
@@ -118,7 +118,7 @@ work:
         infrastructure with Docker, Kubernetes, Ansible, Python, and Golang
 
 skills:
-  - name: AI & LLM
+  - name: AI
     keywords:
       - Agentic Workflows & Tool-use
       - Planning & Execution Loops
@@ -128,7 +128,7 @@ skills:
       - Streaming Speech-to-Text
       - Structured Extraction
 
-  - name: Web Engineering
+  - name: Web
     keywords:
       - TypeScript
       - React
@@ -147,4 +147,11 @@ skills:
       - Kubernetes
       - Ansible
       - Golang
+
+  - name: Communication
+    keywords:
+      - Circling
+      - Authentic Relating
+      - Group facilitation
+      - Community organizing
 
