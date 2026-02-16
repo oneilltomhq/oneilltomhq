@@ -78,6 +78,7 @@ export function renderHTML(
       <li>${icon(icons, 'envelope')} <a href="mailto:${basics.email}">${basics.email}</a></li>
       ${github ? `<li>${icon(icons, 'github')} <a href="${github.url}">${github.username}</a></li>` : ''}
       ${linkedin ? `<li><span class="icon icon-linkedin">${icons['linkedin'] || ''}</span> <a href="${linkedin.url}">${linkedin.username}</a></li>` : ''}
+      <li>${icon(icons, 'websites')} <a href="${basics.url}">${basics.url.replace(/^https?:\/\//, '')}</a></li>
       <li>${icon(icons, 'earth')} ${basics.location.city}</li>
     </ul>
   `;
@@ -100,7 +101,6 @@ export function renderHTML(
       <ul>
         ${p.highlights.map((h) => `<li>${h}</li>`).join('\n')}
       </ul>
-      <p class="project-keywords">${p.keywords.join(' · ')}</p>
     </div>
   `,
     )
@@ -149,33 +149,33 @@ export function renderHTML(
   <style>${css}</style>
 </head>
 <body>
-  <h1 class="name">${basics.name}</h1>
-  <hr class="header-rule">
-
   <div class="two-column">
     <div class="col-left">
-      <h2>${pictogram(pictograms, 'world--community--grid')}Contact &amp; Links</h2>
-      ${contactHTML}
-    </div>
-    <div class="col-right">
-      <h2>${pictogram(pictograms, 'tornado')}Synopsis</h2>
+      <h1 class="name">${basics.name}</h1>
       ${synopsisHTML}
     </div>
+    <div class="col-right">
+      ${contactHTML}
+    </div>
   </div>
 
-  <div class="section">
-    <h2>${pictogram(pictograms, 'tools')}Projects</h2>
-    ${projectsHTML}
-  </div>
+  <div class="two-column-body">
+    <div class="col-left-body">
+      <div class="section">
+        <h2>${pictogram(pictograms, 'briefcase')}Work Experience</h2>
+        ${workHTML}
+      </div>
 
-  <div class="section">
-    <h2>${pictogram(pictograms, 'briefcase')}Work Experience</h2>
-    ${workHTML}
-  </div>
+      <div class="section section-skills">
+        <h2>${pictogram(pictograms, 'heat--map--01')}Skills</h2>
+        ${skillsHTML}
+      </div>
+    </div>
 
-  <div class="section">
-    <h2>${pictogram(pictograms, 'heat--map--01')}Skills</h2>
-    ${skillsHTML}
+    <div class="section">
+      <h2>${pictogram(pictograms, 'tools')}Projects</h2>
+      ${projectsHTML}
+    </div>
   </div>
 </body>
 </html>`;

@@ -94,6 +94,19 @@ work:
         Led development of Atlas of Ownership — a Next.js/Mapbox GL 3D globe
         for browsing land ownership data
 
+  - name: Bearjam
+    position: Co-Founder & Lead Developer
+    url: https://bearjam-dev.vercel.app/
+    startDate: 2020-01-01
+    endDate: 2021-11-01
+    highlights:
+      - >-
+        Developed Dream Builder, a 2D digital vision boarding app in 3D space
+        using React Three Fiber; documented in blog series
+      - >-
+        Built Bear Bookshop: E-commerce site with Stripe/iZettle integrations
+        for payments and POS
+
   - name: Claranet
     position: Systems Engineer & Developer
     url: https://claranet.com
