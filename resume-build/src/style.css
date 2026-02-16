@@ -159,8 +159,8 @@ h2 {
   align-items: flex-start;
 }
 
-.two-column-body > .section,
-.two-column-body > .col-left-body {
+.two-column-body > .col-left-body,
+.two-column-body > .col-right-body {
   flex: 1;
   min-width: 0;
 }
@@ -270,48 +270,21 @@ li::before {
   color: #555;
 }
 
+/* ── Skills (inline tags) ───────────────────────────── */
+
 .section-skills {
-  padding-top: 10px;
+  padding-top: 4px;
 }
 
-.section-skills h2 {
-  justify-content: center;
-}
-
-/* ── Skills ─────────────────────────────────────────── */
-
-.skills-columns {
-  display: flex;
-  gap: 28px;
-}
-
-.skills-column {
-  flex: 1;
-  min-width: 0;
-}
-
-.skills-group-name {
-  font-family: 'EB Garamond', 'Georgia', serif;
-  font-size: 12px;
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.skills-list {
-  list-style: none;
-  margin-left: 0;
-  padding: 0;
-}
-
-.skills-list li {
-  margin-bottom: 2px;
-  font-size: 10px;
+.skills-line {
+  font-size: 9.5px;
   line-height: 1.5;
-  padding-left: 0;
+  margin-bottom: 3px;
+  color: #222;
 }
 
-.skills-list li::before {
-  content: none;
+.skills-line strong {
+  font-weight: 600;
 }
 
 .contact-list li::before {

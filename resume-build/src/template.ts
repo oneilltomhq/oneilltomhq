@@ -124,14 +124,7 @@ export function renderHTML(
 
   const skillsHTML = skills
     .map(
-      (s) => `
-    <div class="skills-column">
-      <h3 class="skills-group-name">${s.name}</h3>
-      <ul class="skills-list">
-        ${s.keywords.map((k) => `<li>${k}</li>`).join('\n')}
-      </ul>
-    </div>
-  `,
+      (s) => `<p class="skills-line"><strong>${s.name}</strong> · ${s.keywords.join(' · ')}</p>`,
     )
     .join('\n');
 
@@ -163,18 +156,18 @@ export function renderHTML(
         <h2>Work Experience</h2>
         ${workHTML}
       </div>
+
+      <div class="section section-skills">
+        <h2>Skills</h2>
+        ${skillsHTML}
+      </div>
     </div>
 
-    <div class="section">
-      <h2>Projects</h2>
-      ${projectsHTML}
-    </div>
-  </div>
-
-  <div class="section section-skills">
-    <h2>Skills</h2>
-    <div class="skills-columns">
-      ${skillsHTML}
+    <div class="col-right-body">
+      <div class="section">
+        <h2>Projects</h2>
+        ${projectsHTML}
+      </div>
     </div>
   </div>
 </body>
