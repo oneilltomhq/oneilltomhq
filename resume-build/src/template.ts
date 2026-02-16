@@ -122,20 +122,18 @@ export function renderHTML(
     )
     .join('\n');
 
-  const skillsHTML = `
-    <ul class="skills-list">
-      ${skills
-        .map(
-          (s) => `
-        <li>
-          <span class="skills-item-name">${s.name}:</span>
-          <span class="skills-item-keywords">${s.keywords.join(', ')}</span>
-        </li>
-      `,
-        )
-        .join('\n')}
-    </ul>
-  `;
+  const skillsHTML = skills
+    .map(
+      (s) => `
+    <div class="skills-column">
+      <h3 class="skills-group-name">${s.name}</h3>
+      <ul class="skills-list">
+        ${s.keywords.map((k) => `<li>${k}</li>`).join('\n')}
+      </ul>
+    </div>
+  `,
+    )
+    .join('\n');
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -162,19 +160,21 @@ export function renderHTML(
   <div class="two-column-body">
     <div class="col-left-body">
       <div class="section">
-        <h2>${pictogram(pictograms, 'briefcase')}Work Experience</h2>
+        <h2>Work Experience</h2>
         ${workHTML}
-      </div>
-
-      <div class="section section-skills">
-        <h2>${pictogram(pictograms, 'heat--map--01')}Skills</h2>
-        ${skillsHTML}
       </div>
     </div>
 
     <div class="section">
-      <h2>${pictogram(pictograms, 'tools')}Projects</h2>
+      <h2>Projects</h2>
       ${projectsHTML}
+    </div>
+  </div>
+
+  <div class="section section-skills">
+    <h2>Skills</h2>
+    <div class="skills-columns">
+      ${skillsHTML}
     </div>
   </div>
 </body>

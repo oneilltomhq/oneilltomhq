@@ -120,16 +120,13 @@ work:
 skills:
   - name: AI & LLM
     keywords:
-      - Tool-calling Agents
-      - Anthropic SDK
-      - Vercel AI SDK
-      - Groq
-      - Deepgram STT
-      - Embeddings
-      - UMAP
-      - HDBSCAN
-      - BERTopic
-      - Nomic AI
+      - Agentic Workflows & Tool-use
+      - Planning & Execution Loops
+      - RAG & Vector Search
+      - Embedding Pipelines
+      - Topic Modeling & Clustering
+      - Streaming Speech-to-Text
+      - Structured Extraction
 
   - name: Web Engineering
     keywords:

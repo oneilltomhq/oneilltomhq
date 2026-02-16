@@ -271,11 +271,31 @@ li::before {
 }
 
 .section-skills {
-  border-top: 0.5px solid #ddd;
   padding-top: 10px;
 }
 
+.section-skills h2 {
+  justify-content: center;
+}
+
 /* ── Skills ─────────────────────────────────────────── */
+
+.skills-columns {
+  display: flex;
+  gap: 28px;
+}
+
+.skills-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.skills-group-name {
+  font-family: 'EB Garamond', 'Georgia', serif;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
 
 .skills-list {
   list-style: none;
@@ -284,9 +304,9 @@ li::before {
 }
 
 .skills-list li {
-  margin-bottom: 4px;
-  font-size: 10.5px;
-  line-height: 1.55;
+  margin-bottom: 2px;
+  font-size: 10px;
+  line-height: 1.5;
   padding-left: 0;
 }
 
@@ -296,12 +316,4 @@ li::before {
 
 .contact-list li::before {
   content: none;
-}
-
-.skills-item-name {
-  font-weight: 700;
-}
-
-.skills-item-keywords {
-  font-weight: 400;
 }
