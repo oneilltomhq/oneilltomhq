@@ -19,9 +19,17 @@ body {
 
 :root {
   --s: 4px;
-  --col-gap: calc(var(--s) * 6);
-  --contact-w: 190px;
-  --qr: 64px;
+  --sidebar-ratio: 30%;
+  --main-ratio: 70%;
+  --col-gap: 28px;
+}
+
+/* ── Hero (full-width header) ───────────────────────── */
+
+.hero {
+  margin-bottom: calc(var(--s) * 4);
+  padding-bottom: calc(var(--s) * 3);
+  text-align: right;
 }
 
 /* ── Name ───────────────────────────────────────────── */
@@ -35,29 +43,22 @@ h1.name {
   margin-bottom: calc(var(--s) * 2);
 }
 
-.header-rule {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin-bottom: 16px;
+/* ── Sidebar layout ─────────────────────────────────── */
+
+.layout {
+  display: flex;
+  gap: var(--col-gap);
+  align-items: flex-start;
 }
 
-/* ── Two-column header ──────────────────────────────── */
-
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 28px;
-  align-items: end;
-  margin-bottom: calc(var(--s) * 4);
-  padding-bottom: calc(var(--s) * 3);
-}
-
-.two-column .col-left {
+.main {
+  flex: 0 0 calc(var(--main-ratio) - var(--col-gap));
   min-width: 0;
 }
 
-.two-column .col-right {
-  justify-self: start;
+.sidebar {
+  flex: 0 0 var(--sidebar-ratio);
+  min-width: 0;
 }
 
 /* ── Section headings ───────────────────────────────── */
@@ -71,6 +72,10 @@ h2 {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
+}
+
+.sidebar h2 {
+  font-size: 16px;
 }
 
 /* ── Pictograms (section heading icons) ─────────────── */
@@ -131,6 +136,10 @@ h2 {
   align-items: center;
 }
 
+.contact-list li::before {
+  content: none;
+}
+
 .contact-list a {
   color: #1a1a1a;
   text-decoration: none;
@@ -142,7 +151,6 @@ h2 {
   font-size: 10.5px;
   line-height: 1.55;
   margin-bottom: var(--s);
-  max-width: 45ch;
 }
 
 /* ── Sections ───────────────────────────────────────── */
@@ -151,26 +159,8 @@ h2 {
   margin-bottom: 14px;
 }
 
-/* ── Two-column body (Projects + Work) ──────────────── */
-
-.two-column-body {
-  display: flex;
-  gap: 28px;
-  align-items: flex-start;
-}
-
-.two-column-body > .col-left-body,
-.two-column-body > .col-right-body {
-  flex: 1;
-  min-width: 0;
-}
-
-.two-column-body li {
-  max-width: none;
-}
-
-.two-column-body .project-description {
-  max-width: none;
+.section-contact {
+  margin-top: 0;
 }
 
 /* ── Projects ───────────────────────────────────────── */
@@ -205,7 +195,6 @@ h3 {
   margin-bottom: 3px;
   line-height: 1.5;
   color: #222;
-  max-width: 45ch;
 }
 
 .project-keywords {
@@ -260,7 +249,6 @@ li {
   line-height: 1.5;
   padding-left: 0;
   margin-bottom: 1px;
-  max-width: 45ch;
 }
 
 li::before {
@@ -285,8 +273,4 @@ li::before {
 
 .skills-line strong {
   font-weight: 600;
-}
-
-.contact-list li::before {
-  content: none;
 }

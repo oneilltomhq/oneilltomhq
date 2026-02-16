@@ -140,35 +140,33 @@ export function renderHTML(
   <style>${css}</style>
 </head>
 <body>
-  <div class="two-column">
-    <div class="col-left">
-      <h1 class="name">${basics.name}</h1>
-      ${synopsisHTML}
-    </div>
-    <div class="col-right">
-      ${contactHTML}
-    </div>
-  </div>
+  <header class="hero">
+    <h1 class="name">${basics.name}</h1>
+    ${synopsisHTML}
+  </header>
 
-  <div class="two-column-body">
-    <div class="col-left-body">
+  <div class="layout">
+    <main class="main">
+      <div class="section">
+        <h2>Recent Projects</h2>
+        ${projectsHTML}
+      </div>
       <div class="section">
         <h2>Work Experience</h2>
         ${workHTML}
       </div>
+    </main>
 
+    <aside class="sidebar">
+      <div class="section section-contact">
+        <h2>Contact</h2>
+        ${contactHTML}
+      </div>
       <div class="section section-skills">
         <h2>Skills</h2>
         ${skillsHTML}
       </div>
-    </div>
-
-    <div class="col-right-body">
-      <div class="section">
-        <h2>Projects</h2>
-        ${projectsHTML}
-      </div>
-    </div>
+    </aside>
   </div>
 </body>
 </html>`;
