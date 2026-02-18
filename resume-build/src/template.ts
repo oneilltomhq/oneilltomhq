@@ -91,10 +91,19 @@ export function renderHTML(
 
   const projectsHTML = projects
     .map(
-      (p) => `
+      (p) => {
+        const githubUrl = p.name === 'crush' 
+          ? 'https://github.com/oneilltomhq/crush'
+          : p.name === 'semantic-atlas'
+          ? 'https://github.com/oneilltomhq/semantic-atlas'
+          : p.name === 'voice-to-hand'
+          ? 'https://github.com/oneilltomhq/voice-to-hand'
+          : null;
+        
+        return `
     <div class="project">
       <div class="project-header">
-        <h3><a href="${p.url}"><span class="project-name-text">${p.name}</span></a></h3>
+        <h3><a href="${p.url}"><span class="project-name-text">${p.name}</span></a>${githubUrl ? ` <a href="${githubUrl}" class="project-github">${githubUrl.replace('https://', '')}</a>` : ''}</h3>
         <span class="work-dates">${formatDate(p.startDate)}${p.endDate ? ` – ${formatDate(p.endDate)}` : ''}</span>
       </div>
       <p class="project-description">${p.description}</p>
@@ -102,7 +111,7 @@ export function renderHTML(
         ${p.highlights.map((h) => `<li>${h}</li>`).join('\n')}
       </ul>
     </div>
-  `,
+  `; }
     )
     .join('\n');
 
@@ -154,7 +163,7 @@ export function renderHTML(
         <h2>Recent Projects</h2>
         ${projectsHTML}
       </div>
-      <div class="section">
+      <div class="section section-work">
         <h2>Work Experience</h2>
         ${workHTML}
       </div>
