@@ -32,6 +32,25 @@ body {
   text-align: right;
 }
 
+/* ── Sidebar layout ─────────────────────────────────── */
+
+.layout {
+  display: flex;
+  gap: var(--col-gap);
+  align-items: flex-start;
+}
+
+.main {
+  flex: 0 0 calc(var(--main-ratio) - var(--col-gap));
+  min-width: 0;
+  margin-top: -50px;
+}
+
+.sidebar {
+  flex: 0 0 var(--sidebar-ratio);
+  min-width: 0;
+}
+
 /* ── Name ───────────────────────────────────────────── */
 
 h1.name {
@@ -41,27 +60,6 @@ h1.name {
   letter-spacing: 0.01em;
   line-height: 1.05;
   margin-bottom: calc(var(--s) * 2);
-}
-
-/* ── Sidebar layout ─────────────────────────────────── */
-
-.layout {
-  display: flex;
-  gap: var(--col-gap);
-  align-items: stretch;
-  flex: 1;
-}
-
-.main {
-  flex: 0 0 calc(var(--main-ratio) - var(--col-gap));
-  min-width: 0;
-}
-
-.sidebar {
-  flex: 0 0 var(--sidebar-ratio);
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 /* ── Section headings ───────────────────────────────── */
