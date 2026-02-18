@@ -21,19 +21,16 @@ basics:
 projects:
   - name: crush
     description: >-
-      Chromium shell — a Chrome extension that acts as an agentic interface
-      to the browser's power tools (debugger, side panel, screen capture),
-      with a 3D multiplexed terminal UI built on Three.js WebGPU, SDF text
-      rendering, and libghostty-vt.
+      Chrome extension that gives an LLM agent direct access to browser
+      power tools — debugger, side panel, screen capture — with a 3D
+      terminal UI for orchestrating tabs.
     url: https://github.com/oneilltomhq/crush
     startDate: 2026-02-08
     highlights:
-      - Three.js WebGPU renderer + TSL blocks for 3D orchestration UI
-      - libghostty-vt integration — virtual terminal emulator running in-browser
-      - LLM agent automating tabs via Side Panel API and chrome.debugger/CDP
-      - Tabs represented as 3D terminal panes in an orchestration window
-      - Q&A-driven, scientific-methodology approach — discovering boundaries empirically
-      - Browser-native security model — no sysadmin or dev experience required, just install the extension
+      - 3D orchestration UI — Three.js WebGPU renderer with TSL shader blocks
+      - In-browser terminal emulation via libghostty-vt and SDF text rendering
+      - LLM agent automates tabs through Side Panel API and chrome.debugger/CDP
+      - Browser-native security model — install the extension and go, no sysadmin needed
     keywords:
       - TypeScript
       - Three.js
@@ -87,18 +84,17 @@ projects:
 
 work:
   - name: Open Systems Lab
-    position: Lead Engineer
+    position: Full Stack 3D Web Developer
     url: https://opensystemslab.io/
     startDate: 2021-11-01
     endDate: 2025-03-01
     highlights:
       - >-
-        Led engineering of BuildX, a 3D web CAD tool for modular housing design
-        (WikiHouse configurator) — parametric modeling, collision detection,
-        geospatial site selection (Mapbox GL), IFC processing, with core logic
-        extracted into a shared library
+        Led BuildX — 3D web CAD for modular housing (WikiHouse configurator);
+        parametric modeling, collision detection, IFC export
+      - Geospatial site-selection layer built on Mapbox GL; core logic extracted into a shared library
       - >-
-        Led development of Atlas of Ownership — a Next.js/Mapbox GL 3D globe
+        Led Atlas of Ownership — Next.js / Mapbox GL 3D globe
         for browsing land ownership data
 
   - name: Bearjam

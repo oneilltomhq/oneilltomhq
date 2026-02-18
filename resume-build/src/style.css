@@ -9,20 +9,12 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   color: #1a1a1a;
   background: #fff;
   font-size: 10.5px;
   line-height: 1.55;
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
 }
 
 :root {
@@ -63,13 +55,6 @@ h1.name {
 .main {
   flex: 0 0 calc(var(--main-ratio) - var(--col-gap));
   min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.main .section:last-child {
-  margin-top: auto;
-  margin-bottom: 0;
 }
 
 .sidebar {
@@ -83,7 +68,7 @@ h1.name {
 
 h2 {
   font-family: 'EB Garamond', 'Georgia', serif;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.02em;
   padding-bottom: 6px;
@@ -185,7 +170,7 @@ h2 {
 
 h3 {
   font-family: 'EB Garamond', 'Georgia', serif;
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 500;
   margin-bottom: 1px;
 }
