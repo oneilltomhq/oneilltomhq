@@ -14,9 +14,9 @@ basics:
       url: https://www.linkedin.com/in/oneilltomhq
 
   summary: |
-    AI Engineer
-    Building agentic tooling and prototypes
-    10 years of full-stack and infrastructure
+    Creative technologist turned AI engineer
+    Building agentically driven tools and products
+    10 years of full-stack and infrastructure underneath
 
 projects:
   - name: crush
@@ -51,7 +51,7 @@ projects:
     url: https://github.com/oneilltomhq/semantic-atlas
     startDate: 2026-02-04
     highlights:
-      - NLP pipeline — GDPR exports → Nomic embeddings → UMAP → HDBSCAN clusters
+      - Python NLP pipeline — GDPR exports → Nomic embeddings → UMAP → HDBSCAN clusters
       - WebGPU/Three.js 3D point cloud with topic filtering and navigation
     keywords:
       - Python
@@ -68,12 +68,12 @@ projects:
     description: >-
       Voice-driven poker hand recorder — live speech to structured hand history
       with visual replayer.
-    url: https://github.com/oneilltomhq/Voice2Hand
+    url: https://github.com/oneilltomhq/voice-to-hand
     startDate: 2025-11-21
     endDate: 2025-12-08
     highlights:
       - Streaming speech-to-text (Deepgram) → LLM parsing (Groq) → structured game state
-      - Incremental JSON Patch updates, interactive visual replayer
+      - Vitest evaluation against golden dataset of hands
     keywords:
       - TypeScript
       - Next.js
@@ -122,6 +122,7 @@ skills:
       - Topic Modeling & Clustering
       - Streaming Speech-to-Text
       - Structured Extraction
+      - Python
 
   - name: Web
     keywords:
@@ -137,7 +138,6 @@ skills:
 
   - name: Infrastructure
     keywords:
-      - Python
       - Docker
       - Kubernetes
       - Ansible
