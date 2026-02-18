@@ -9,20 +9,12 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
 body {
-  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-  color: #1a1a1a;
+  font-family: 'EB Garamond', 'Georgia', serif;
+  color: #2a2a2a;
   background: #fff;
-  font-size: 10.5px;
+  font-size: 11px;
   line-height: 1.55;
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
 }
 
 :root {
@@ -40,6 +32,25 @@ body {
   text-align: right;
 }
 
+/* ── Sidebar layout ─────────────────────────────────── */
+
+.layout {
+  display: flex;
+  gap: var(--col-gap);
+  align-items: flex-start;
+}
+
+.main {
+  flex: 0 0 calc(var(--main-ratio) - var(--col-gap));
+  min-width: 0;
+  margin-top: -50px;
+}
+
+.sidebar {
+  flex: 0 0 var(--sidebar-ratio);
+  min-width: 0;
+}
+
 /* ── Name ───────────────────────────────────────────── */
 
 h1.name {
@@ -51,39 +62,11 @@ h1.name {
   margin-bottom: calc(var(--s) * 2);
 }
 
-/* ── Sidebar layout ─────────────────────────────────── */
-
-.layout {
-  display: flex;
-  gap: var(--col-gap);
-  align-items: stretch;
-  flex: 1;
-}
-
-.main {
-  flex: 0 0 calc(var(--main-ratio) - var(--col-gap));
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.main .section:last-child {
-  margin-top: auto;
-  margin-bottom: 0;
-}
-
-.sidebar {
-  flex: 0 0 var(--sidebar-ratio);
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 /* ── Section headings ───────────────────────────────── */
 
 h2 {
   font-family: 'EB Garamond', 'Georgia', serif;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.02em;
   padding-bottom: 6px;
@@ -147,9 +130,13 @@ h2 {
 }
 
 .contact-list li {
+  font-family: 'DM Mono', monospace;
   margin-bottom: var(--s);
-  font-size: 10px;
+  font-size: 9px;
+  font-weight: 300;
   line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #4a4a4a;
   display: flex;
   align-items: center;
 }
@@ -159,15 +146,19 @@ h2 {
 }
 
 .contact-list a {
-  color: #1a1a1a;
+  color: #4a4a4a;
   text-decoration: none;
 }
 
 /* ── Synopsis ───────────────────────────────────────── */
 
 .synopsis p {
-  font-size: 10.5px;
-  line-height: 1.55;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 9.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: #444;
   margin-bottom: var(--s);
 }
 
@@ -185,7 +176,7 @@ h2 {
 
 h3 {
   font-family: 'EB Garamond', 'Georgia', serif;
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 500;
   margin-bottom: 1px;
 }
@@ -200,7 +191,7 @@ h3 {
 }
 
 .project h3 a {
-  color: #1a1a1a;
+  color: #2a2a2a;
   text-decoration: none;
 }
 
@@ -209,10 +200,10 @@ h3 {
 }
 
 .project-description {
-  font-size: 10px;
+  font-size: 10.5px;
   margin-bottom: 3px;
   line-height: 1.5;
-  color: #222;
+  color: #444;
 }
 
 .project-keywords {
@@ -239,7 +230,7 @@ h3 {
 }
 
 .work-header h3 a {
-  color: #1a1a1a;
+  color: #2a2a2a;
   text-decoration: none;
 }
 
@@ -263,7 +254,7 @@ ul {
 }
 
 li {
-  font-size: 10px;
+  font-size: 10.5px;
   line-height: 1.5;
   padding-left: 0;
   margin-bottom: 1px;
@@ -292,7 +283,10 @@ li::before {
 }
 
 .skills-line {
-  font-size: 9.5px;
-  line-height: 1.5;
-  color: #222;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 8.5px;
+  font-weight: 300;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  color: #555;
 }

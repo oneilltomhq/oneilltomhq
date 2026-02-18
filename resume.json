@@ -128,26 +128,29 @@
             "type": "extension"
         },
         {
-            "name": "browser-native-agent",
-            "url": "https://github.com/oneilltomhq/browser-native-agent",
-            "description": "Reference implementation of a browser-resident LLM agent that automates the same Chrome instance via agent-browser-ext (MV3 + chrome.debugger/CDP) — no Playwright, no spawned Chromium; inherits existing cookies, auth state, and extensions.",
+            "name": "crush",
+            "url": "https://github.com/oneilltomhq/crush",
+            "description": "Chromium shell — a Chrome extension that acts as an agentic interface to the browser's power tools (debugger, side panel, screen capture), with a 3D multiplexed terminal UI built on Three.js WebGPU, SDF text rendering, and libghostty-vt. The browser as a zero-setup sandbox for end users.",
             "highlights": [
-                "Tool-calling agent runs in-browser and dispatches CDP primitives via typed message passing to MV3 background service worker",
-                "Same-instance automation: operates on already-authenticated tabs without re-login, profile syncing, or driver-managed Chromium",
-                "Grounding loop: snapshot → plan → tool-call → verify, using AX+DOMSnapshot element targeting to reduce selector brittleness",
-                "Minimal by design: deterministic tool schema, step logging, and clear boundaries between reasoning and actuation"
+                "Three.js WebGPU renderer + TSL blocks for 3D orchestration UI",
+                "libghostty-vt integration — virtual terminal emulator running in-browser",
+                "LLM agent automating tabs via Side Panel API and chrome.debugger/CDP",
+                "Tabs represented as 3D terminal panes in an orchestration window",
+                "Q&A-driven, scientific-methodology approach — discovering boundaries empirically",
+                "Browser-native security model — no sysadmin or dev experience required, just install the extension"
             ],
             "keywords": [
                 "TypeScript",
-                "LLM Agents",
-                "Tool-calling",
-                "Anthropic SDK",
+                "Three.js",
+                "WebGPU",
+                "TSL",
+                "libghostty-vt",
                 "Chrome Extension",
                 "Manifest V3",
-                "chrome.debugger",
+                "Side Panel API",
                 "Chrome DevTools Protocol",
-                "Browser Automation",
-                "Accessibility Tree"
+                "LLM Agents",
+                "Browser Automation"
             ],
             "startDate": "2026-02-09",
             "endDate": "",
