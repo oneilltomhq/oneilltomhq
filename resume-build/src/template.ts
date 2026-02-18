@@ -139,7 +139,7 @@ export function renderHTML(
   <title>${basics.name} — Resume</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@300;400&family=DM+Mono:wght@300;400&family=Source+Code+Pro:wght@200;300;400&display=swap" rel="stylesheet">
   <style>${css}</style>
 </head>
 <body>

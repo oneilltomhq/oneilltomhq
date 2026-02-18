@@ -6,7 +6,7 @@ AI engineer based near London. Currently exploring AI-native workflows, from bro
 
 - **[voice-browser-agent](https://github.com/oneilltomhq/voice-browser-agent)** — Chrome Side Panel extension for voice-driven, LLM-powered browser automation via CDP
 - **[agent-browser-ext](https://github.com/oneilltomhq/agent-browser-ext)** — Chrome extension providing CDP automation primitives for in-browser AI agents
-- **[browser-native-agent](https://github.com/oneilltomhq/browser-native-agent)** — LLM agent that runs in-browser, driving Chrome via agent-browser-ext
+- **[crush](https://github.com/oneilltomhq/crush)** — Agentic chromium shell: Chrome extension bridging LLM agents to browser power tools, with a 3D multiplexed terminal UI (Three.js WebGPU, SDF text, libghostty-vt)
 - **[Semantic Atlas](https://github.com/oneilltomhq/semantic-atlas)** — 3D visualization of AI conversation history using WebGPU, clustered via BERTopic embeddings
 - **[Voice2Hand](https://github.com/oneilltomhq/Voice2Hand)** — Voice-driven poker hand recorder: Deepgram STT → Groq LLM → interactive replayer
 - **[Jobby](https://github.com/oneilltomhq/Jobby)** — AI job search: conversational career coach + semantic matching engine (pgvector, Nomic AI)
