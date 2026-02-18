@@ -154,7 +154,7 @@ export function renderHTML(
         <h2>Recent Projects</h2>
         ${projectsHTML}
       </div>
-      <div class="section">
+      <div class="section section-work">
         <h2>Work Experience</h2>
         ${workHTML}
       </div>
