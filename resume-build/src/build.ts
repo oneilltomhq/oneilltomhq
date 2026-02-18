@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 const root = resolve(__dirname, '..');
 
 // 1. Read and parse YAML
-const yamlPath = resolve(root, '..', 'resume.yaml');
+const yamlPath = resolve(root, '..', 'resume-ai-engineer.yaml');
 const data = parse(readFileSync(yamlPath, 'utf-8')) as ResumeData;
 
 // 2. Read CSS

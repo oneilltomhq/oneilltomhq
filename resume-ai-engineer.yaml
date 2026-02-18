@@ -19,25 +19,32 @@ basics:
     10 years of full-stack and infrastructure work underneath.
 
 projects:
-  - name: browser-native-agent
+  - name: crush
     description: >-
-      LLM agent that automates the user's own browser via chrome.debugger —
-      no Playwright, inheriting existing auth and sessions.
-    url: https://github.com/oneilltomhq/browser-native-agent
+      Chromium shell — a Chrome extension that acts as an agentic interface
+      to the browser's power tools (debugger, side panel, screen capture),
+      with a 3D multiplexed terminal UI built on Three.js WebGPU, SDF text
+      rendering, and libghostty-vt.
+    url: https://github.com/oneilltomhq/crush
     startDate: 2026-02-08
     highlights:
-      - Accessibility-tree targeting for LLM element selection — same ref pattern as Vercel's agent-browser
-      - Tool-calling agent loop (Anthropic SDK) with snapshot → plan → act → verify cycle
-      - Chrome Extension with Side Panel chat UI for interactive control
+      - Three.js WebGPU renderer + TSL blocks for 3D orchestration UI
+      - libghostty-vt integration — virtual terminal emulator running in-browser
+      - LLM agent automating tabs via Side Panel API and chrome.debugger/CDP
+      - Tabs represented as 3D terminal panes in an orchestration window
+      - Q&A-driven, scientific-methodology approach — discovering boundaries empirically
+      - Browser-native security model — no sysadmin or dev experience required, just install the extension
     keywords:
       - TypeScript
+      - Three.js
+      - WebGPU
+      - TSL
+      - libghostty-vt
       - Chrome Extension
       - Manifest V3
+      - Side Panel API
       - Chrome DevTools Protocol
-      - Accessibility Tree
-      - Anthropic SDK
       - LLM Agents
-      - Tool-calling
       - Browser Automation
 
   - name: semantic-atlas
