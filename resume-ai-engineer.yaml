@@ -14,9 +14,9 @@ basics:
       url: https://www.linkedin.com/in/oneilltomhq
 
   summary: |
-    AI Engineer.
-    Building agentic tools and prototypes since '25.
-    10 years of full-stack and infrastructure work underneath.
+    AI Engineer
+    Building agentic tooling and prototypes
+    10 years of full-stack and infrastructure
 
 projects:
   - name: crush
@@ -27,10 +27,10 @@ projects:
     url: https://github.com/oneilltomhq/crush
     startDate: 2026-02-08
     highlights:
-      - 3D orchestration UI — Three.js WebGPU renderer with TSL shader blocks
-      - In-browser terminal emulation via libghostty-vt and SDF text rendering
-      - LLM agent automates tabs through Side Panel API and chrome.debugger/CDP
-      - Browser-native security model — install the extension and go, no sysadmin needed
+      - 3D orchestration UI — Three.js WebGPU renderer, TSL shader blocks
+      - In-browser terminal via libghostty-vt, SDF text rendering
+      - LLM agent drives tabs through Side Panel API and CDP
+      - Zero-config security — install and go, no sysadmin needed
     keywords:
       - TypeScript
       - Three.js
@@ -51,8 +51,8 @@ projects:
     url: https://github.com/oneilltomhq/semantic-atlas
     startDate: 2026-02-04
     highlights:
-      - NLP pipeline from GDPR exports → Nomic embeddings → UMAP → HDBSCAN topic clusters
-      - WebGPU/Three.js 3D point cloud with topic filtering and semantic navigation
+      - NLP pipeline — GDPR exports → Nomic embeddings → UMAP → HDBSCAN clusters
+      - WebGPU/Three.js 3D point cloud with topic filtering and navigation
     keywords:
       - Python
       - Three.js
@@ -72,8 +72,8 @@ projects:
     startDate: 2025-11-21
     endDate: 2025-12-08
     highlights:
-      - Streaming speech-to-text (Deepgram) with LLM parsing (Groq) into structured game state
-      - Incremental JSON Patch updates with interactive visual replayer
+      - Streaming speech-to-text (Deepgram) → LLM parsing (Groq) → structured game state
+      - Incremental JSON Patch updates, interactive visual replayer
     keywords:
       - TypeScript
       - Next.js
@@ -90,12 +90,10 @@ work:
     endDate: 2025-03-01
     highlights:
       - >-
-        Led BuildX — 3D web CAD for modular housing (WikiHouse configurator);
+        BuildX — 3D web CAD for modular housing;
         parametric modeling, collision detection, IFC export
-      - Geospatial site-selection layer built on Mapbox GL; core logic extracted into a shared library
-      - >-
-        Led Atlas of Ownership — Next.js / Mapbox GL 3D globe
-        for browsing land ownership data
+      - Geospatial site-selection layer on Mapbox GL, extracted into shared library
+      - Atlas of Ownership — Next.js / Mapbox GL 3D globe for land ownership data
 
   - name: Bearjam
     position: Co-Founder & Lead Developer
@@ -103,12 +101,8 @@ work:
     startDate: 2020-01-01
     endDate: 2021-11-01
     highlights:
-      - >-
-        Developed Dream Builder, a 2D digital vision boarding app in 3D space
-        using React Three Fiber; documented in blog series
-      - >-
-        Built Bear Bookshop: E-commerce site with Stripe/iZettle integrations
-        for payments and POS
+      - Dream Builder — 2D vision-boarding app in 3D space with React Three Fiber
+      - Bear Bookshop — e-commerce site, Stripe/iZettle payments and POS
 
   - name: Claranet
     position: Systems Engineer & Developer
@@ -116,9 +110,7 @@ work:
     startDate: 2015-11-01
     endDate: 2017-04-01
     highlights:
-      - >-
-        Contributed to OpenStack Kolla (Neutron BGP routing); automated
-        infrastructure with Docker, Kubernetes, Ansible, Python, and Golang
+      - OpenStack Kolla contributor (Neutron BGP routing); infra automation with Docker, K8s, Ansible
 
 skills:
   - name: AI

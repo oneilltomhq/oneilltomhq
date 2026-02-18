@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve, basename, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
 import { parse } from 'yaml';
 import { chromium } from 'playwright';
 import { renderHTML, type ResumeData } from './template.js';
@@ -46,7 +47,9 @@ const page = await browser.newPage();
 await page.setContent(html, { waitUntil: 'networkidle' });
 await page.evaluate(() => document.fonts.ready);
 
-const outputPath = resolve(outputDir, 'resume.pdf');
+const shortHash = execSync('git rev-parse --short HEAD', { cwd: root, encoding: 'utf-8' }).trim();
+const dirty = execSync('git status --porcelain', { cwd: root, encoding: 'utf-8' }).trim() ? '-dirty' : '';
+const outputPath = resolve(outputDir, `resume-${shortHash}${dirty}.pdf`);
 await page.pdf({
   path: outputPath,
   printBackground: true,
