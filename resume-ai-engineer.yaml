@@ -21,28 +21,25 @@ basics:
 projects:
   - name: crush
     description: >-
-      Chrome extension that gives an LLM agent direct access to browser
-      power tools — debugger, side panel, screen capture — with a 3D
-      terminal UI for orchestrating tabs.
+      Chrome-native AI Agent Runtime with WebGPU Terminal
     url: https://github.com/oneilltomhq/crush
     startDate: 2026-02-08
     highlights:
-      - 3D orchestration UI — Three.js WebGPU renderer, TSL shader blocks
-      - In-browser terminal via libghostty-vt, SDF text rendering
-      - LLM agent drives tabs through Side Panel API and CDP
-      - Zero-config security — install and go, no sysadmin needed
+      - Ported Ghostty terminal emulator to WASM, enabling a full POSIX-compliant shell environment directly inside the browser Side Panel
+      - Engineered a WebGPU/Three.js renderer using SDF (Signed Distance Field) text, capable of rendering 1920-cell grids at 60fps for agent diagnostics
+      - Implemented LLM-driven command loop where models interact with the browser via a persistent, virtualized shell environment
     keywords:
       - TypeScript
-      - Three.js
       - WebGPU
-      - TSL
+      - WASM
+      - Three.js
+      - SDF Text
       - libghostty-vt
+      - POSIX Shell
       - Chrome Extension
-      - Manifest V3
       - Side Panel API
-      - Chrome DevTools Protocol
+      - OPFS
       - LLM Agents
-      - Browser Automation
 
   - name: semantic-atlas
     description: >-
