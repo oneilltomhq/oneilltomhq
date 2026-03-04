@@ -21,25 +21,23 @@ basics:
 projects:
   - name: crush
     description: >-
-      Chrome-native AI Agent Runtime with WebGPU Terminal
+      Voice-driven AI agent runtime — multi-agent workspace with 3D spatial UI
     url: https://github.com/oneilltomhq/crush
     startDate: 2026-02-08
     highlights:
-      - Ported Ghostty terminal emulator to WASM, enabling a full POSIX-compliant shell environment directly inside the browser Side Panel
-      - Engineered a WebGPU/Three.js renderer using SDF (Signed Distance Field) text, capable of rendering 1920-cell grids at 60fps for agent diagnostics
-      - Implemented LLM-driven command loop where models interact with the browser via a persistent, virtualized shell environment
+      - Built multi-agent system with FOH voice agent delegating to specialized workers (shell, browser, prospecting, LinkedIn automation) via pi-agent-core
+      - Designed agent definitions as markdown + YAML frontmatter with a skills system following the Agent Skills standard for progressive domain knowledge disclosure
+      - Engineered CDP browser automation layer driving authenticated sessions (LinkedIn, X) for real-world prospecting and profile management
+      - WebGPU/Three.js spatial renderer with SDF text at 60fps, rendering agent workspaces as navigable 3D pane layouts
     keywords:
       - TypeScript
-      - WebGPU
-      - WASM
-      - Three.js
-      - SDF Text
-      - libghostty-vt
-      - POSIX Shell
-      - Chrome Extension
-      - Side Panel API
-      - OPFS
       - LLM Agents
+      - Multi-Agent Systems
+      - CDP Browser Automation
+      - WebGPU
+      - Three.js
+      - Voice UI
+      - Agent Skills
 
   - name: semantic-atlas
     description: >-
