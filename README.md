@@ -1,7 +1,7 @@
 # Thomas O'Neill
 
 3D web engineer in London — Three.js, WebGPU, React.
-Full-stack and agentic-AI background. → oneilltom.com
+Full-stack systems background, building with agentic AI. → oneilltom.com
 
 ## Recent projects
 
