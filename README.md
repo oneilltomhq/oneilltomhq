@@ -7,5 +7,5 @@ Full-stack systems background, building with agentic AI. → oneilltom.com
 
 - **[lib3](https://github.com/oneilltomhq/lib3)** — Composable Three.js WebGPU shader experiments on npm — SDF text, raymarching, volumetric effects
 - **[hydra-tsl](https://github.com/oneilltomhq/hydra-tsl)** — Hydra video-synth core compiled to Three.js TSL — WebGPU/WGSL with automatic WebGL fallback
-- **[crush](https://github.com/oneilltomhq/crush)** — Chromium shell turning the browser into an agentic workspace — LLM agents drive tabs while you watch in a Three.js/WebGPU 3D scene
 - **[semantic-atlas](https://github.com/oneilltomhq/semantic-atlas)** — 3D explorer for AI conversation history — embeddings → clustering → interactive WebGPU point cloud
+- **[Hudson](https://github.com/oneilltomhq/Hudson)** — Agentic poker intelligence console — turns real hand histories into player analytics, villain radar, and showdown evidence
