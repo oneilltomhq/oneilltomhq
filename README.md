@@ -1,11 +1,10 @@
 # Thomas O'Neill
 
 3D web engineer in London — Three.js, WebGPU, React.
-Full-stack systems background, building with agentic AI. → oneilltom.com
+Full-stack systems background, building with agentic AI. → [oneilltom.com](https://oneilltom.com)
 
-## Recent projects
+## Recent Projects
 
 - **[lib3](https://github.com/oneilltomhq/lib3)** — Composable Three.js WebGPU shader experiments on npm — SDF text, raymarching, volumetric effects
-- **[hydra-tsl](https://github.com/oneilltomhq/hydra-tsl)** — Hydra video-synth core compiled to Three.js TSL — WebGPU/WGSL with automatic WebGL fallback
 - **[semantic-atlas](https://github.com/oneilltomhq/semantic-atlas)** — 3D explorer for AI conversation history — embeddings → clustering → interactive WebGPU point cloud
 - **[Hudson](https://github.com/oneilltomhq/Hudson)** — Agentic poker intelligence console — turns real hand histories into player analytics, villain radar, and showdown evidence
