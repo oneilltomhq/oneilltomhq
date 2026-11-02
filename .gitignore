@@ -1,2 +1,5 @@
 .env*
 tmp/
+# local renders from diagram/render.sh
+diagram/arc/*.png
+diagram/arc/_wrap-*.html
