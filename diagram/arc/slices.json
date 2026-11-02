@@ -1,0 +1,203 @@
+[
+ {
+  "y": 0,
+  "h": 60,
+  "kind": "chapter",
+  "id": "On the web",
+  "month": "2025-09"
+ },
+ {
+  "y": 60,
+  "h": 46,
+  "kind": "row",
+  "id": "lib3",
+  "url": "https://github.com/oneilltomhq/lib3"
+ },
+ {
+  "y": 106,
+  "h": 52,
+  "kind": "chapter",
+  "id": "In the browser",
+  "month": "2026-02"
+ },
+ {
+  "y": 158,
+  "h": 46,
+  "kind": "row",
+  "id": "agent-browser-ext",
+  "url": "https://github.com/oneilltomhq/agent-browser-ext"
+ },
+ {
+  "y": 204,
+  "h": 46,
+  "kind": "row",
+  "id": "voice-browser-agent",
+  "url": "https://github.com/oneilltomhq/voice-browser-agent"
+ },
+ {
+  "y": 250,
+  "h": 46,
+  "kind": "row",
+  "id": "crush",
+  "url": "https://github.com/oneilltomhq/crush"
+ },
+ {
+  "y": 296,
+  "h": 46,
+  "kind": "row",
+  "id": "ghostty-web",
+  "url": "https://github.com/oneilltomhq/ghostty-web"
+ },
+ {
+  "y": 342,
+  "h": 46,
+  "kind": "row",
+  "id": "aiwm",
+  "url": "https://github.com/oneilltomhq/aiwm"
+ },
+ {
+  "y": 388,
+  "h": 46,
+  "kind": "row",
+  "id": "semantic-atlas",
+  "url": "https://github.com/oneilltomhq/semantic-atlas"
+ },
+ {
+  "y": 434,
+  "h": 52,
+  "kind": "chapter",
+  "id": "The site",
+  "month": "2026-06"
+ },
+ {
+  "y": 486,
+  "h": 46,
+  "kind": "row",
+  "id": "oneilltom.com",
+  "url": "https://github.com/oneilltomhq/oneilltom.com"
+ },
+ {
+  "y": 532,
+  "h": 46,
+  "kind": "row",
+  "id": "hydra-tsl",
+  "url": "https://github.com/oneilltomhq/hydra-tsl"
+ },
+ {
+  "y": 578,
+  "h": 52,
+  "kind": "chapter",
+  "id": "Out of the browser",
+  "month": "2026-08"
+ },
+ {
+  "y": 630,
+  "h": 46,
+  "kind": "row",
+  "id": "agent-native-shell",
+  "url": null
+ },
+ {
+  "y": 676,
+  "h": 46,
+  "kind": "row",
+  "id": "nonlinear",
+  "url": null
+ },
+ {
+  "y": 722,
+  "h": 46,
+  "kind": "row",
+  "id": "wgpu-smithay-renderer",
+  "url": null
+ },
+ {
+  "y": 768,
+  "h": 46,
+  "kind": "row",
+  "id": "3os",
+  "url": null
+ },
+ {
+  "y": 814,
+  "h": 52,
+  "kind": "chapter",
+  "id": "Into crates",
+  "month": "2026-09"
+ },
+ {
+  "y": 866,
+  "h": 46,
+  "kind": "row",
+  "id": "plurality",
+  "url": null
+ },
+ {
+  "y": 912,
+  "h": 46,
+  "kind": "row",
+  "id": "windows-pane",
+  "url": null
+ },
+ {
+  "y": 958,
+  "h": 46,
+  "kind": "row",
+  "id": "smithay-wgpu",
+  "url": null
+ },
+ {
+  "y": 1004,
+  "h": 46,
+  "kind": "row",
+  "id": "wgpu-dmabuf",
+  "url": "https://github.com/oneilltomhq/wgpu-dmabuf"
+ },
+ {
+  "y": 1050,
+  "h": 46,
+  "kind": "row",
+  "id": "glasspane",
+  "url": "https://github.com/oneilltomhq/glasspane"
+ },
+ {
+  "y": 1096,
+  "h": 46,
+  "kind": "row",
+  "id": "three-rs",
+  "url": "https://github.com/oneilltomhq/three-rs"
+ },
+ {
+  "y": 1142,
+  "h": 46,
+  "kind": "row",
+  "id": "d3-hierarchy",
+  "url": "https://github.com/oneilltomhq/d3-hierarchy"
+ },
+ {
+  "y": 1188,
+  "h": 52,
+  "kind": "chapter",
+  "id": "Upfront",
+  "month": "2026-10"
+ },
+ {
+  "y": 1240,
+  "h": 46,
+  "kind": "row",
+  "id": "upfront",
+  "url": null
+ },
+ {
+  "y": 1286,
+  "h": 46,
+  "kind": "row",
+  "id": "d3-three",
+  "url": "https://github.com/oneilltomhq/d3-three"
+ },
+ {
+  "y": 1332,
+  "h": 76,
+  "kind": "legend"
+ }
+]

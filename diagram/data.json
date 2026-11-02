@@ -1,0 +1,544 @@
+{
+  "_doc": "Single source of truth for the project-history diagram; gen-arc.js reads this. month = 'YYYY-MM' (first month). family picks the colour. tier: 1 = hero (bigger name and dot). kind: lineage | depends | part | graded | uses. graded/uses edges whose 'to' is an anchor draw as a ray to the right margin. unconfirmed: true draws the edge faint. standalone: true = no edges; not drawn by the arc. chapters: one per time band, in order; 'from' is the first month of the band.",
+  "families": {
+    "shell": {
+      "label": "Agent-driven shells",
+      "hue": "violet"
+    },
+    "rust": {
+      "label": "Rust graphics crates",
+      "hue": "orange"
+    },
+    "web": {
+      "label": "three.js / D3 on the web",
+      "hue": "aqua"
+    }
+  },
+  "nodes": [
+    {
+      "id": "lib3",
+      "name": "lib3",
+      "month": "2025-09",
+      "public": true,
+      "family": "web",
+      "blurb": "three.js WebGPU shader nodes, on npm",
+      "url": "https://github.com/oneilltomhq/lib3"
+    },
+    {
+      "id": "agent-browser-ext",
+      "name": "agent-browser-ext",
+      "month": "2026-02",
+      "public": true,
+      "family": "shell",
+      "blurb": "Chrome extension: CDP primitives for agents",
+      "url": "https://github.com/oneilltomhq/agent-browser-ext"
+    },
+    {
+      "id": "voice-browser-agent",
+      "name": "voice-browser-agent",
+      "month": "2026-02",
+      "public": true,
+      "family": "shell",
+      "blurb": "side-panel chat UI for CDP automation",
+      "url": "https://github.com/oneilltomhq/voice-browser-agent"
+    },
+    {
+      "id": "crush",
+      "name": "crush",
+      "month": "2026-02",
+      "public": true,
+      "family": "shell",
+      "blurb": "in-browser LLM agent with a 3D WebGPU terminal; parked",
+      "url": "https://github.com/oneilltomhq/crush",
+      "archived": true
+    },
+    {
+      "id": "ghostty-web",
+      "name": "ghostty-web",
+      "month": "2026-02",
+      "public": true,
+      "family": "shell",
+      "blurb": "fork",
+      "url": "https://github.com/oneilltomhq/ghostty-web",
+      "fork": true
+    },
+    {
+      "id": "semantic-atlas",
+      "name": "semantic-atlas",
+      "month": "2026-02",
+      "public": true,
+      "family": "web",
+      "blurb": "your AI chat history as a 3D point cloud",
+      "url": "https://github.com/oneilltomhq/semantic-atlas"
+    },
+    {
+      "id": "aiwm",
+      "name": "aiwm",
+      "month": "2026-02",
+      "public": true,
+      "family": "shell",
+      "blurb": "headless sway driven by an LLM agent",
+      "url": "https://github.com/oneilltomhq/aiwm"
+    },
+    {
+      "id": "oneilltom.com",
+      "name": "oneilltom.com",
+      "month": "2026-06",
+      "public": true,
+      "family": "web",
+      "blurb": "the site",
+      "url": "https://github.com/oneilltomhq/oneilltom.com"
+    },
+    {
+      "id": "hydra-tsl",
+      "name": "hydra-tsl",
+      "month": "2026-06",
+      "public": true,
+      "family": "web",
+      "blurb": "hydra synth on three.js shader nodes",
+      "url": "https://github.com/oneilltomhq/hydra-tsl"
+    },
+    {
+      "id": "agent-native-shell",
+      "name": "agent-native-shell",
+      "month": "2026-08",
+      "public": false,
+      "family": "shell",
+      "blurb": "the umbrella idea + canvas prototype",
+      "url": null
+    },
+    {
+      "id": "nonlinear",
+      "name": "nonlinear",
+      "month": "2026-08",
+      "public": false,
+      "family": "shell",
+      "blurb": "spike 1: smithay",
+      "url": null
+    },
+    {
+      "id": "wgpu-smithay-renderer",
+      "name": "wgpu-smithay-renderer",
+      "month": "2026-08",
+      "public": false,
+      "family": "shell",
+      "blurb": "wgpu renderer (was nl2-glass)",
+      "url": null
+    },
+    {
+      "id": "3os",
+      "name": "3os",
+      "month": "2026-08",
+      "public": false,
+      "family": "shell",
+      "blurb": "3D desktop prototype",
+      "url": null
+    },
+    {
+      "id": "plurality",
+      "name": "plurality",
+      "month": "2026-09",
+      "public": false,
+      "family": "shell",
+      "blurb": "shell prototype",
+      "url": null
+    },
+    {
+      "id": "smithay-wgpu",
+      "name": "smithay-wgpu",
+      "month": "2026-09",
+      "public": false,
+      "family": "rust",
+      "blurb": "smithay renderer traits on wgpu",
+      "url": null
+    },
+    {
+      "id": "wgpu-dmabuf",
+      "name": "wgpu-dmabuf",
+      "month": "2026-09",
+      "public": true,
+      "family": "rust",
+      "blurb": "Linux dma-buf interop for wgpu",
+      "url": "https://github.com/oneilltomhq/wgpu-dmabuf"
+    },
+    {
+      "id": "glasspane",
+      "name": "glasspane",
+      "month": "2026-09",
+      "public": true,
+      "family": "rust",
+      "blurb": "headless Wayland compositor as a crate",
+      "url": "https://github.com/oneilltomhq/glasspane",
+      "tier": 1
+    },
+    {
+      "id": "three-rs",
+      "name": "three-rs",
+      "month": "2026-09",
+      "public": true,
+      "family": "rust",
+      "blurb": "three.js core + WebGPURenderer in Rust",
+      "url": "https://github.com/oneilltomhq/three-rs",
+      "tier": 1
+    },
+    {
+      "id": "d3-hierarchy",
+      "name": "d3-hierarchy",
+      "month": "2026-09",
+      "public": true,
+      "family": "rust",
+      "blurb": "d3-hierarchy 3.1.2 in Rust",
+      "url": "https://github.com/oneilltomhq/d3-hierarchy"
+    },
+    {
+      "id": "windows-pane",
+      "name": "windows-pane",
+      "month": "2026-09",
+      "public": false,
+      "family": "shell",
+      "blurb": "Windows VM as a pane",
+      "url": null
+    },
+    {
+      "id": "upfront",
+      "name": "Upfront",
+      "month": "2026-10",
+      "public": false,
+      "family": "shell",
+      "blurb": "Rust Wayland shell, Claude Code as the agent",
+      "url": null,
+      "flagship": true,
+      "goingPublic": true,
+      "tier": 1
+    },
+    {
+      "id": "d3-three",
+      "name": "d3-three",
+      "month": "2026-10",
+      "public": true,
+      "family": "web",
+      "blurb": "18 D3 gallery charts in three.js WebGPU",
+      "url": "https://github.com/oneilltomhq/d3-three"
+    },
+    {
+      "id": "hudson",
+      "name": "Hudson",
+      "month": "2026-05",
+      "public": true,
+      "family": "other",
+      "blurb": "poker intelligence console",
+      "standalone": true,
+      "url": "https://github.com/oneilltomhq/hudson"
+    },
+    {
+      "id": "voice-to-hand",
+      "name": "voice-to-hand",
+      "month": "2025-11",
+      "public": true,
+      "family": "other",
+      "blurb": "",
+      "standalone": true,
+      "url": "https://github.com/oneilltomhq/voice-to-hand"
+    },
+    {
+      "id": "jobby",
+      "name": "Jobby",
+      "month": "2025-12",
+      "public": true,
+      "family": "other",
+      "blurb": "archived",
+      "standalone": true,
+      "archived": true,
+      "url": "https://github.com/oneilltomhq/jobby"
+    },
+    {
+      "id": "rack",
+      "name": "Rack",
+      "month": "2026-06",
+      "public": true,
+      "family": "other",
+      "blurb": "virtual Eurorack",
+      "standalone": true,
+      "url": "https://github.com/oneilltomhq/rack"
+    },
+    {
+      "id": "agentic-faust-web",
+      "name": "agentic-faust-web",
+      "month": "2026-06",
+      "public": true,
+      "family": "other",
+      "blurb": "",
+      "standalone": true,
+      "url": "https://github.com/oneilltomhq/agentic-faust-web"
+    },
+    {
+      "id": "dynamics-notebook",
+      "name": "dynamics-notebook",
+      "month": "2026-07",
+      "public": true,
+      "family": "other",
+      "blurb": "",
+      "standalone": true,
+      "url": "https://github.com/oneilltomhq/dynamics-notebook"
+    },
+    {
+      "id": "showreel",
+      "name": "showreel",
+      "month": "2026-07",
+      "public": true,
+      "family": "other",
+      "blurb": "",
+      "standalone": true,
+      "url": "https://github.com/oneilltomhq/showreel"
+    },
+    {
+      "id": "buildx",
+      "name": "buildx-core / app",
+      "month": "2025-01",
+      "public": true,
+      "family": "other",
+      "blurb": "archived",
+      "standalone": true,
+      "archived": true,
+      "url": "https://github.com/oneilltomhq/buildx-core"
+    },
+    {
+      "id": "fedimint-observer-front",
+      "name": "fedimint-observer-front",
+      "month": "2024-06",
+      "public": true,
+      "family": "other",
+      "blurb": "",
+      "standalone": true,
+      "url": "https://github.com/oneilltomhq/fedimint-observer-front"
+    },
+    {
+      "id": "pipefold",
+      "name": "pipefold.io",
+      "month": "2024-09",
+      "public": true,
+      "family": "other",
+      "blurb": "archived",
+      "standalone": true,
+      "archived": true,
+      "url": "https://github.com/oneilltomhq/pipefold.io"
+    }
+  ],
+  "edges": [
+    {
+      "from": "agent-native-shell",
+      "to": "nonlinear",
+      "kind": "lineage",
+      "label": "spike 1"
+    },
+    {
+      "from": "nonlinear",
+      "to": "wgpu-smithay-renderer",
+      "kind": "lineage",
+      "label": "succeeded by"
+    },
+    {
+      "from": "wgpu-smithay-renderer",
+      "to": "3os",
+      "kind": "lineage",
+      "label": "succeeded by"
+    },
+    {
+      "from": "3os",
+      "to": "plurality",
+      "kind": "lineage",
+      "label": "succeeded by"
+    },
+    {
+      "from": "plurality",
+      "to": "upfront",
+      "kind": "lineage",
+      "label": "ported to"
+    },
+    {
+      "from": "3os",
+      "to": "wgpu-dmabuf",
+      "kind": "lineage",
+      "label": "extracted from"
+    },
+    {
+      "from": "three-rs",
+      "to": "d3-hierarchy",
+      "kind": "lineage",
+      "label": "split out"
+    },
+    {
+      "from": "crush",
+      "to": "agent-native-shell",
+      "kind": "lineage",
+      "label": "same idea, in 3D",
+      "unconfirmed": true
+    },
+    {
+      "from": "aiwm",
+      "to": "agent-native-shell",
+      "kind": "lineage",
+      "label": "same idea, in 3D",
+      "unconfirmed": true
+    },
+    {
+      "from": "upfront",
+      "to": "three-rs",
+      "kind": "depends"
+    },
+    {
+      "from": "upfront",
+      "to": "glasspane",
+      "kind": "depends"
+    },
+    {
+      "from": "upfront",
+      "to": "wgpu-dmabuf",
+      "kind": "depends"
+    },
+    {
+      "from": "glasspane",
+      "to": "wgpu-dmabuf",
+      "kind": "depends"
+    },
+    {
+      "from": "smithay-wgpu",
+      "to": "wgpu-dmabuf",
+      "kind": "depends"
+    },
+    {
+      "from": "plurality",
+      "to": "d3-hierarchy",
+      "kind": "depends"
+    },
+    {
+      "from": "plurality",
+      "to": "three-rs",
+      "kind": "depends",
+      "note": "three-rs-controls"
+    },
+    {
+      "from": "three-rs",
+      "to": "d3-hierarchy",
+      "kind": "depends",
+      "note": "one example only"
+    },
+    {
+      "from": "d3-three",
+      "to": "lib3",
+      "kind": "depends"
+    },
+    {
+      "from": "semantic-atlas",
+      "to": "lib3",
+      "kind": "depends"
+    },
+    {
+      "from": "oneilltom.com",
+      "to": "lib3",
+      "kind": "depends"
+    },
+    {
+      "from": "crush",
+      "to": "agent-browser-ext",
+      "kind": "depends"
+    },
+    {
+      "from": "crush",
+      "to": "ghostty-web",
+      "kind": "depends"
+    },
+    {
+      "from": "hydra-tsl",
+      "to": "oneilltom.com",
+      "kind": "part",
+      "label": "embedded in"
+    },
+    {
+      "from": "windows-pane",
+      "to": "plurality",
+      "kind": "part",
+      "label": "pane of"
+    },
+    {
+      "from": "windows-pane",
+      "to": "upfront",
+      "kind": "part",
+      "label": "now in"
+    },
+    {
+      "from": "three-rs",
+      "to": "threejs-ref",
+      "kind": "graded",
+      "note": "100 of 215 example pages pass"
+    },
+    {
+      "from": "d3-three",
+      "to": "d3-gallery",
+      "kind": "graded",
+      "note": "18 charts, each diffed against a committed frame"
+    },
+    {
+      "from": "d3-hierarchy",
+      "to": "d3-hierarchy-js",
+      "kind": "graded",
+      "note": "same operations, same order"
+    },
+    {
+      "from": "upfront",
+      "to": "typesafe",
+      "kind": "uses",
+      "note": "fast typed calls that skip an agent turn"
+    }
+  ],
+  "chapters": [
+    {
+      "from": "2025-01",
+      "title": "On the web",
+      "note": "three.js WebGPU shader nodes, published to npm."
+    },
+    {
+      "from": "2026-02",
+      "title": "In the browser",
+      "note": "Agents driving Chrome: a CDP extension, a voice side panel, an in-browser agent with a 3D terminal."
+    },
+    {
+      "from": "2026-06",
+      "title": "The site",
+      "note": "oneilltom.com, with the shader work embedded."
+    },
+    {
+      "from": "2026-08",
+      "title": "Out of the browser",
+      "note": "Down to the compositor level: four Wayland spikes, each replacing the last."
+    },
+    {
+      "from": "2026-09",
+      "title": "Into crates",
+      "note": "The parts that held, split out to crates.io. three.js and D3 ported to Rust and graded against the originals."
+    },
+    {
+      "from": "2026-10",
+      "title": "Upfront",
+      "note": "The spikes converge into one shell, with Claude Code as the agent."
+    }
+  ],
+  "anchors": [
+    {
+      "id": "threejs-ref",
+      "name": "three.js reference screenshots"
+    },
+    {
+      "id": "d3-gallery",
+      "name": "D3 gallery"
+    },
+    {
+      "id": "d3-hierarchy-js",
+      "name": "d3-hierarchy (JS)"
+    },
+    {
+      "id": "typesafe",
+      "name": "TypeSafe · Jev"
+    }
+  ]
+}
