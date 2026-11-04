@@ -1,6 +1,6 @@
 # Thomas O'Neill
 
-I build software with Claude Code, and the checks that keep its output honest.
+Systems & AI engineering, with ten years of full-stack and infrastructure underneath.
 Rust, TypeScript, WebGPU. London / remote, available for contracts. → [oneilltom.com](https://oneilltom.com)
 
 ## Now
@@ -62,9 +62,8 @@ Split out of Upfront, on crates.io:
 
 ## How I work with Claude Code
 
-- Every rule in `CLAUDE.md` comes from a failure I actually saw, not one I guessed at. Skills and hooks hold the rest.
-- One worktree and one PR per piece of work. Subagents run in parallel, each on the cheapest model that can do its job.
-- Before building, probe agents measure the problem and report numbers. Demos are reviewed against a fixed set of questions.
+- Each repo carries the `CLAUDE.md` rules, skills and hooks Claude Code works from. Short and specific.
+- Each step goes to the smallest model that can do it. Subagents run in parallel, one worktree and one PR each.
 
 ## Earlier
 
