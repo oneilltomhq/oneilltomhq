@@ -44,10 +44,10 @@ Every row is a repo, time runs down, and the arcs are the relationships between 
 <a href="https://github.com/oneilltomhq/d3-three"><picture><source media="(prefers-color-scheme: dark)" srcset="diagram/arc/dark/27.svg"><img src="diagram/arc/light/27.svg" width="704" alt="d3-three: 18 D3 gallery charts in three.js WebGPU" align="top"></picture></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="diagram/arc/dark/28.svg"><img src="diagram/arc/light/28.svg" width="704" alt="legend" align="top"></picture>
 
-## Built with Claude Code, graded by a reference
+## Graded by a reference
 
-Each of these ports is checked against an outside reference, so a change counts only when the
-reference agrees. The Claude co-authored commits and the `CLAUDE.md` files are in the history.
+Each of these ports is built with an agent and checked against an outside reference, so a change counts
+only when the reference agrees. The co-authored commits and the `CLAUDE.md` files are in the history.
 
 - **[three-rs](https://github.com/oneilltomhq/three-rs)**: three.js core and `WebGPURenderer` ported to Rust on wgpu.
   Each example is diffed against three.js's own reference screenshots, using its unmodified comparator. 100 of 215 gradeable pages pass so far.
@@ -60,9 +60,9 @@ Split out of Upfront, on crates.io:
 - **[glasspane](https://github.com/oneilltomhq/glasspane)**: a headless Wayland compositor as a Rust library. It hosts real clients and gives you one `wgpu::Texture` per window.
 - **[wgpu-dmabuf](https://github.com/oneilltomhq/wgpu-dmabuf)**: Linux dma-buf interop for wgpu.
 
-## How I work with Claude Code
+## How I work
 
-- Each repo carries the `CLAUDE.md` rules, skills and hooks Claude Code works from. Short and specific.
+- Each repo carries the rules, skills and hooks the agent works from. Short and specific.
 - Each step goes to the smallest model that can do it. Subagents run in parallel, one worktree and one PR each.
 
 ## Earlier
